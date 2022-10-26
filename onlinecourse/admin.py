@@ -33,7 +33,7 @@ class LessonAdmin(admin.ModelAdmin):
 
 class QuestionAdmin(admin.ModelAdmin):
     inlines = [ChoiceInLine]
-    fields = ('question_text', 'grade', 'lesson_id')
+    fields = ('text', 'grade', 'lesson')
 
 admin.site.register(Course, CourseAdmin)
 admin.site.register(Lesson, LessonAdmin)
@@ -41,4 +41,4 @@ admin.site.register(Instructor)
 admin.site.register(Learner)
 admin.site.register(Question, QuestionAdmin)
 admin.site.register(Choice)
-admin.site.register(Submission)
+#admin.site.register(Submission)
